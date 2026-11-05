@@ -1,0 +1,33 @@
+sources:
+  - id: "hn-top"
+    type: "hn"
+    params:
+      query: "front_page"
+    cadence: "30m"
+    enabled: true
+    trust: 0.8
+
+  - id: "arxiv-ai"
+    type: "arxiv"
+    params:
+      categories: ["cs.AI", "cs.CL"]
+      query: "agents"
+    cadence: "12h"
+    enabled: true
+    trust: 0.9
+
+  - id: "local-rss"
+    type: "rss"
+    params:
+      url: "https://news.ycombinator.com/rss"
+    cadence: "1h"
+    enabled: true
+    trust: 0.7
+
+  - id: "gh-langgraph"
+    type: "github"
+    params:
+      repo: "langchain-ai/langgraph"
+    cadence: "6h"
+    enabled: true
+    trust: 0.85

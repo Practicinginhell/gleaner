@@ -1,0 +1,13 @@
+# Standing questions: keep the user's answers current (M17, ADR-0007)
+questions:
+  - id: q-small-models-tool-use
+    text: "Are small open models good enough for tool use in production?"
+    linked_interests: ["local-llm", "agents"]
+  - id: q-langgraph-production
+    text: "What are the common failure modes of LangGraph in production?"
+    linked_interests: ["multi-agent", "graphflow"]
+  - id: q-test-time-compute
+    text: "Does test-time compute scaling generalize across domain tasks?"
+    linked_interests: ["deep-learning", "reasoning"]
+
+watch: "pyproject.toml"

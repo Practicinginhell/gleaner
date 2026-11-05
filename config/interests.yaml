@@ -1,0 +1,38 @@
+# Exclusions drop an item in Stage A when one appears as a whole word or phrase. Stage A
+# combines every interest's list, so all interests share one list (the &excluded anchor).
+# Besides crypto spam, it carries the hackathon's content rules (official guide,
+# 2026-10-30): nothing medical, political or war-related.
+interests:
+  - id: "agent-frameworks"
+    label: "Agent Frameworks"
+    description: "LangGraph, graphflow, and autonomous multi-agent orchestration frameworks."
+    keywords: ["agent", "graphflow", "langgraph", "orchestration", "multi-agent"]
+    exclusions: &excluded [
+      "crypto", "nft", "blockchain",
+      "medical", "clinical", "patient", "patients", "diagnosis", "disease", "diabetes", "cancer", "pediatric",
+      "healthcare", "hospital", "physician", "therapy", "mental health", "genomic",
+      "election", "elections", "political", "politics", "senate", "congress", "parliament", "national assembly",
+      "lawmakers", "president", "prime minister", "democrat", "republican", "government",
+      "war", "wars", "military", "missile", "missiles", "weapon", "weapons", "army", "airstrike", "invasion",
+    ]
+    weight: 1.0
+    kind: "topic"
+    active: true
+
+  - id: "test-time-compute"
+    label: "Test-Time Compute"
+    description: "Inference scaling, search, and reasoning at test time in large language models."
+    keywords: ["test-time", "inference compute", "search", "mcts", "reasoning"]
+    exclusions: *excluded
+    weight: 0.9
+    kind: "topic"
+    active: true
+
+  - id: "local-first-software"
+    label: "Local-First Software"
+    description: "SQLite, CRDTs, offline capability, and local-first personal software architectures."
+    keywords: ["local-first", "sqlite", "crdt", "offline"]
+    exclusions: *excluded
+    weight: 0.8
+    kind: "topic"
+    active: true

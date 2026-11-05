@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# scripts/dev — run the gleaner CLI. Arguments go to it:
+#
+#   ./scripts/dev --help
+#
+# Contract: runs in the foreground, logs to stdout/stderr.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+PYTHON="${PYTHON:-python}"
+
+exec "$PYTHON" -m gleaner "$@"

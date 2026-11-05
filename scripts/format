@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# scripts/format — apply ruff's safe autofixes in place (import order, __all__ order,
+# pyupgrade rewrites).
+#
+# This repo does not use `ruff format`: its code isn't formatter-formatted, and running
+# one would rewrite every file. The style rules are the ruff lint rules in pyproject.toml.
+#
+# Contract: idempotent, non-interactive.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+PYTHON="${PYTHON:-python}"
+
+"$PYTHON" -m ruff check --fix --quiet gleaner tests || true
+"$PYTHON" -m ruff check --quiet gleaner tests >/dev/null || {
+  echo "scripts/format: some lint errors have no autofix; run ./scripts/lint" >&2
+}

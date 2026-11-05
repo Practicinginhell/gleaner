@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>arXiv Search cs.AI cs.CL</title>
+  <entry>
+    <id>http://arxiv.org/abs/2610.12345v1</id>
+    <updated>2026-10-27T12:00:00Z</updated>
+    <published>2026-10-27T12:00:00Z</published>
+    <title>Test-Time Compute Scaling for Autonomous Agents</title>
+    <summary>We investigate test-time compute search mechanisms across multi-agent workflows.</summary>
+    <author><name>Alice Johnson</name></author>
+    <author><name>Bob Lee</name></author>
+    <link href="http://arxiv.org/abs/2610.12345v1" rel="alternate" type="text/html"/>
+    <link title="pdf" href="http://arxiv.org/pdf/2610.12345v1" rel="related" type="application/pdf"/>
+  </entry>
+</feed>

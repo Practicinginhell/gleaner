@@ -1,0 +1,18 @@
+interests:
+  - id: "agent-frameworks"
+    label: "Agent Frameworks"
+    description: "LangGraph, graphflow, and autonomous multi-agent orchestration frameworks."
+    keywords: ["agent", "graphflow", "langgraph", "orchestration"]
+    exclusions: ["crypto", "blockchain"]
+    weight: 1.0
+    kind: "topic"
+    active: true
+
+  - id: "test-time-compute"
+    label: "Test-Time Compute"
+    description: "Inference scaling, search, and reasoning at test time in large language models."
+    keywords: ["test-time", "inference compute", "search", "mcts", "reasoning"]
+    exclusions: []
+    weight: 0.9
+    kind: "topic"
+    active: true

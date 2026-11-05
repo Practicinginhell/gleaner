@@ -1,0 +1,38 @@
+{
+  "interests": [
+    {
+      "id": "agent-frameworks",
+      "label": "Agent Frameworks",
+      "description": "LangGraph, graphflow, and multi-agent orchestration frameworks.",
+      "keywords": ["agent", "graphflow", "langgraph", "orchestration", "multi-agent", "workflows"]
+    },
+    {
+      "id": "test-time-compute",
+      "label": "Test-Time Compute",
+      "description": "Inference scaling, search, and reasoning at test time in language models.",
+      "keywords": ["test-time", "inference", "compute", "search", "reasoning", "scaling"]
+    },
+    {
+      "id": "local-first-software",
+      "label": "Local-First Software",
+      "description": "SQLite, CRDTs, and offline local-first software.",
+      "keywords": ["local-first", "sqlite", "crdt", "offline", "database"]
+    }
+  ],
+  "items": [
+    {"id": "eval-6", "source": "lifestyle-blog", "title": "Delicious chocolate muffin recipe", "relevant": false, "relevance_score": 0.0},
+    {"id": "eval-7", "source": "lifestyle-blog", "title": "Sourdough bread starter tips", "relevant": false, "relevance_score": 0.0},
+    {"id": "eval-1", "source": "github-releases", "title": "Graphflow workflows in production", "relevant": true, "relevance_score": 1.0},
+    {"id": "eval-8", "source": "hn-frontpage", "title": "Celebrity fashion gossip today", "relevant": false, "relevance_score": 0.0},
+    {"id": "eval-9", "source": "hn-frontpage", "title": "Crypto bitcoin trading signals", "relevant": false, "relevance_score": 0.0},
+    {"id": "eval-3", "source": "arxiv-ai", "title": "Test-time compute search mechanisms", "relevant": true, "relevance_score": 0.9},
+    {"id": "eval-11", "source": "lifestyle-blog", "title": "Tomato garden growing guide", "relevant": false, "relevance_score": 0.0},
+    {"id": "eval-2", "source": "hn-frontpage", "title": "LangGraph multi-agent systems", "relevant": true, "relevance_score": 1.0},
+    {"id": "eval-12", "source": "hn-frontpage", "title": "Weekend football scores roundup", "relevant": false, "relevance_score": 0.0},
+    {"id": "eval-10", "source": "hn-frontpage", "title": "Local SQLite database optimization", "relevant": true, "relevance_score": 0.7},
+    {"id": "eval-4", "source": "arxiv-ai", "title": "Reasoning models inference scaling", "relevant": true, "relevance_score": 0.8},
+    {"id": "eval-13", "source": "lifestyle-blog", "title": "Minimalist living room decor ideas", "relevant": false, "relevance_score": 0.0},
+    {"id": "eval-5", "source": "github-releases", "title": "Declarative subgraph compilation", "relevant": true, "relevance_score": 0.8},
+    {"id": "eval-14", "source": "hn-frontpage", "title": "CRDT sync for offline apps", "relevant": true, "relevance_score": 0.7}
+  ]
+}

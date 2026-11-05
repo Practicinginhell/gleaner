@@ -1,0 +1,55 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gleaner"
+version = "0.1.0"
+description = "Personal information discovery: collect from many sources, filter noise with Llama, surface what matters to you."
+readme = "README.md"
+requires-python = ">=3.15"
+dependencies = [
+    # Pre-existing (declared in README): graphflow at its pre-hackathon commit plus graphflow.text (the chunker).
+    "graphflow @ git+https://github.com/Practicinginhell/shiori@f43b73ecbdc14620e36073d9cda82725169068ec",
+    # The app itself (collect, filter, rank, serve).
+    "feedparser>=6.0.11",
+    "trafilatura>=2.0.0",
+    "datasketch>=1.6.5",
+    "scikit-learn>=1.5.0",
+    "sqlite-vec>=0.1.6",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.30.0",
+    "jinja2>=3.1.4",
+    "httpx>=0.27.0",
+    "pydantic>=2.8.0",
+    "pyyaml>=6.0.2",
+]
+
+[project.optional-dependencies]
+llama = ["langchain-openai>=0.2.0", "openai>=1.0.0"]
+# Meta's Llama Prompt Guard 2 classifier (gated weights; see README "Prompt Guard 2")
+guard = ["transformers>=4.46", "torch>=2.5"]
+dev = ["pytest>=7.0.0", "pytest-asyncio>=0.23", "ruff>=0.6"]
+
+[tool.setuptools.packages.find]
+include = ["gleaner*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "asyncio: mark test as async coroutine",
+]
+
+[tool.ruff]
+target-version = "py315"
+line-length = 120
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "BLE", "PIE", "PERF", "RUF", "PLW1510", "S"]
+ignore = [
+    "E501",    # long lines are left to judgment
+    "S101",    # assert is used for internal invariants
+]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/**" = ["S", "BLE001", "B011", "B017", "PERF"]

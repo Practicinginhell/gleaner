@@ -1,0 +1,6 @@
+sources:
+  - id: "bad-cadence-src"
+    type: "rss"
+    params:
+      url: "https://example.com/feed.xml"
+    cadence: "whenever"

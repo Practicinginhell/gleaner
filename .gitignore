@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+build/
+dist/
+.venv/
+
+# App data (SQLite databases, caches)
+*.db
+*.db-wal
+*.db-shm
+data/
+
+# AI agent files: kept local, never pushed (leading / = repo root only)
+/AGENTS.md
+/CLAUDE.md
+/CLAUDE.local.md
+/GEMINI.md
+/.gemini/
+/.geminiignore
+/.claude/
+/.agents/
+/ai/
+/tasks/
+/.mcp.json
+/.github/copilot-instructions.md
+/.github/PULL_REQUEST_TEMPLATE.md
+/.playwright-cli/
+
+# Editor settings
+.vscode/
+
+# Secrets
+.env
+.env.*
+!.env.example
+secrets/
+
+# OS junk
+.DS_Store
+Thumbs.db

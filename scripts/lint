@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# scripts/lint — static analysis with ruff (rules in pyproject.toml). Read-only.
+#
+# Contract: exit 0 = clean. Extra args go to ruff (e.g. --statistics).
+set -euo pipefail
+cd "$(dirname "$0")/.."
+PYTHON="${PYTHON:-python}"
+
+"$PYTHON" -m ruff check gleaner tests "$@"

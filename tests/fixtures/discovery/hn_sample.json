@@ -1,0 +1,22 @@
+{
+  "hits": [
+    {
+      "objectID": "41234567",
+      "title": "Show HN: Graphflow – Declarative Workflows for LangGraph",
+      "url": "https://github.com/langchain-ai/graphflow",
+      "author": "devuser",
+      "points": 342,
+      "num_comments": 89,
+      "created_at": "2026-10-27T16:30:00.000Z"
+    },
+    {
+      "objectID": "41234568",
+      "title": "Ask HN: How do you manage local SQLite vectors?",
+      "url": null,
+      "author": "dbfan",
+      "points": 95,
+      "num_comments": 42,
+      "created_at": "2026-10-27T17:00:00.000Z"
+    }
+  ]
+}

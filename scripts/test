@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# scripts/test — run the test suite (offline: MockModel stands in for LLMs).
+# Extra args go to pytest, so focused runs work:
+#   ./scripts/test tests/test_smoke.py -k version
+#
+# Contract: exit 0 = all green, non-zero = failures. Non-interactive.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+PYTHON="${PYTHON:-python}"
+
+"$PYTHON" -m pytest -q "$@"

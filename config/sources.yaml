@@ -1,0 +1,126 @@
+sources:
+  - id: "hn-frontpage"
+    type: "hn"
+    params:
+      query: "front_page"
+    cadence: "30m"
+    enabled: true
+    trust: 0.8
+
+  - id: "arxiv-cs-ai"
+    type: "arxiv"
+    params:
+      categories: ["cs.AI", "cs.CL", "cs.MA"]
+      query: "autonomous agents"
+    cadence: "12h"
+    enabled: true
+    trust: 0.9
+
+  - id: "gh-langgraph"
+    type: "github"
+    params:
+      repo: "langchain-ai/langgraph"
+    cadence: "6h"
+    enabled: true
+    trust: 0.85
+
+  # Matched to the standing questions in questions.yaml (user-approved 2026-10-30)
+  - id: "arxiv-function-calling"
+    type: "arxiv"
+    params:
+      categories: ["cs.CL", "cs.AI"]
+      query: '"function calling"'
+    cadence: "12h"
+    enabled: true
+    trust: 0.9
+
+  - id: "arxiv-test-time-compute"
+    type: "arxiv"
+    params:
+      categories: ["cs.LG", "cs.CL"]
+      query: '"test-time compute"'
+    cadence: "12h"
+    enabled: true
+    trust: 0.9
+
+  - id: "hn-langgraph"
+    type: "hn"
+    params:
+      query: "LangGraph"
+    cadence: "1h"
+    enabled: true
+    trust: 0.75
+
+  - id: "hn-tool-calling"
+    type: "hn"
+    params:
+      query: "tool calling"
+    cadence: "1h"
+    enabled: true
+    trust: 0.75
+
+  - id: "gh-ollama"
+    type: "github"
+    params:
+      repo: "ollama/ollama"
+    cadence: "6h"
+    enabled: true
+    trust: 0.9
+
+  # Paused 2026-10-30: GitHub now redirects meta-llama/llama-stack to ogx-ai/ogx; confirm it is
+  # the same project before pointing this source there
+  - id: "gh-llama-stack"
+    type: "github"
+    params:
+      repo: "meta-llama/llama-stack"
+    cadence: "6h"
+    enabled: false
+    trust: 0.9
+
+  - id: "blog-simon-willison"
+    type: "rss"
+    params:
+      url: "https://simonwillison.net/atom/everything/"
+    cadence: "3h"
+    enabled: true
+    trust: 0.85
+
+  - id: "blog-hugging-face"
+    type: "rss"
+    params:
+      url: "https://huggingface.co/blog/feed.xml"
+    cadence: "3h"
+    enabled: true
+    trust: 0.85
+
+  - id: "blog-sebastian-raschka"
+    type: "rss"
+    params:
+      url: "https://magazine.sebastianraschka.com/feed"
+    cadence: "3h"
+    enabled: true
+    trust: 0.85
+
+  - id: "blog-interconnects"
+    type: "rss"
+    params:
+      url: "https://www.interconnects.ai/feed"
+    cadence: "3h"
+    enabled: true
+    trust: 0.85
+
+  - id: "blog-lilian-weng"
+    type: "rss"
+    params:
+      url: "https://lilianweng.github.io/index.xml"
+    cadence: "3h"
+    enabled: true
+    trust: 0.85
+
+  - id: "blog-ollama"
+    type: "rss"
+    params:
+      url: "https://ollama.com/blog/rss.xml"
+    cadence: "3h"
+    enabled: true
+    trust: 0.85

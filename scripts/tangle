@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# scripts/tangle — regenerate literate modules from docs/literate/*.md (ADR-0006).
+#   ./scripts/tangle            # write the modules
+#   ./scripts/tangle --check    # exit 1 if any module drifted from its document
+#
+# Contract: exit 0 = in sync (or written), non-zero = drift or a malformed document.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+PYTHON="${PYTHON:-python}"
+
+"$PYTHON" scripts/tangle.py "$@"

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# scripts/setup — install gleaner in editable mode with its dev and llama extras (pulls the pinned graphflow).
+#
+# Uses $PYTHON (default: the `python` on PATH). Prefers `uv pip` when uv is installed:
+# plain pip can fail in environments that hold another project's editable install
+# (see ai/context/gotchas.md). Installing changes that environment, so agents ask first.
+#
+# Contract: idempotent, non-interactive, exit 0 on success.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+PYTHON="${PYTHON:-python}"
+
+if command -v uv >/dev/null 2>&1; then
+  uv pip install --python "$PYTHON" -e ".[dev,llama]"
+else
+  "$PYTHON" -m pip install -e ".[dev,llama]"
+fi

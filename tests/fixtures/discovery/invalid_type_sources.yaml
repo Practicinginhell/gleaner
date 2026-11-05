@@ -1,0 +1,6 @@
+sources:
+  - id: "unknown-type-src"
+    type: "telepathy"
+    params:
+      freq: "99MHz"
+    cadence: "1h"
